@@ -22,7 +22,7 @@ public class TileManager : MonoBehaviour
                 if (tileDictionary.ContainsKey(new Vector2(i,j)) ==false)//this function should be able to be expanded upon
                 {
                     Vector2 currVect = new Vector2(i,j);
-                    GameObject currTile = Instantiate(tilePrefab,new Vector3(i * tileSize,j * tileSize,0),Quaternion.identity);
+                    GameObject currTile = Instantiate(tilePrefab,new Vector3(i * tileSize,j * tileSize, 100),Quaternion.identity);
                     TileScript currScript = currTile.GetComponent<TileScript>();
                     currScript.init(currVect);
                     tileDictionary[currVect] = currTile;
